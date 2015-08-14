@@ -5,16 +5,22 @@
 </head>
 
 <body>
-    <table>
-        <tbody>
-            <tr>
-                <td>john cena</td>
-                <td>you cant see me</td>
-            </tr>
-        </tbody>
-    </table>
+    {{> messages}}
     <form>
         <input type="text">
         <input type="button" value="Send">
     </form>
 </body>
+
+<template name="messages">
+    <table>
+        <tbody>
+            {{#each messages}}
+            <tr>
+                <td>{{user}}</td>
+                <td>{{message}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</template>
