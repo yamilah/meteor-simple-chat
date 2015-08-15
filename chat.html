@@ -8,8 +8,9 @@
     {{> messages}}
     <form>
         <input type="text" name="message">
-        <input type="submit" value="Send">
+        <input type="submit" value="Send" disabled="{{#unless currentUser}}True{{/unless}}">
     </form>
+    {{> loginButtons}}
 </body>
 
 <template name="messages">
