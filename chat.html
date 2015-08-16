@@ -1,16 +1,17 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
     <title>Simple Meteor Chat</title>
 </head>
 
 <body>
-    {{> messages}}
-    <form>
-        <input type="text" name="message">
-        <input type="submit" value="Send" disabled="{{#unless currentUser}}True{{/unless}}">
-    </form>
-    {{> loginButtons}}
+        {{> loginButtons}}
+        {{> messages}}
+        <form>
+            <input type="text" name="message">
+            <input type="submit" value="Send" disabled="{{#unless currentUser}}True{{/unless}}">
+        </form>
 </body>
 
 <template name="messages">

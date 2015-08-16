@@ -7,4 +7,4 @@
 meteor-platform
 accounts-base
 accounts-password
-accounts-ui
+accounts-ui-unstyled
